@@ -1,0 +1,245 @@
+<div class="page-header border-bottom">
+    <div class="container">
+        <div class="d-md-flex justify-content-between align-items-center py-4">
+            <h1 class="page-title font-size-3 font-weight-medium m-0 text-lh-lg">Shop Single</h1>
+            <nav class="woocommerce-breadcrumb font-size-2">
+                <a href="../home/index.html" class="h-primary">Home</a>
+                <span class="breadcrumb-separator mx-1"><i class="fas fa-angle-right"></i></span>
+                <a href="../shop/v1.html" class="h-primary">Shop</a>
+                <span class="breadcrumb-separator mx-1"><i class="fas fa-angle-right"></i></span>Shop Single
+            </nav>
+        </div>
+    </div>
+</div>
+<div id="primary" class="content-area container">
+    <main id="main" class="site-main ">
+        <div class="product">
+            <div class="container">
+                <div class="row">
+                    <div  class="col-md-5 woocommerce-product-gallery woocommerce-product-gallery--with-images images">
+                        <figure  class="woocommerce-product-gallery__wrapper pt-8 mb-0">
+                            <div class="js-slick-carousel u-slick"
+                                data-pagi-classes="text-center u-slick__pagination my-4">
+                                <div  class="js-slide ">
+                                    <img [src]="product.coverImageUrl" class="mx-auto img-fluid coverImage">
+                                </div>
+                                    <div class="js-slide ">
+                                        <img [src]="product.coverImageUrl" class="mx-auto img-fluid coverImage">
+                                    </div>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-md-7 pl-0 summary entry-summary border-left align-items-center">
+                        <div class="space-top-2 px-4 px-xl-7 pb-5 align-items-center">
+                            <h1 class="product_title entry-title font-size-7 mb-3">{{product.title}}</h1>
+                            <div class="font-size-2 mb-4">
+                                <span class="text-yellow-darker">
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                </span>
+                                <span class="ml-3">(3,714)</span>
+                                <span class="ml-3 font-weight-medium">By (author)</span>
+                                <span class="ml-2 text-gray-600">{{product.author}}</span>
+                            </div>
+                            <p class="price font-size-22 font-weight-medium mb-3">
+                                <span class="woocommerce-Price-amount amount">
+                                    <span class="woocommerce-Price-currencySymbol">₺</span>{{product.price|currency:'':'':'1.2-2'}}</span>
+                            </p>
+                            <div class="mb-2 font-size-2">
+                                <span class="font-weight-medium">Yayın:</span>
+                                <span class="ml-2 text-gray-600">{{product.publisher}}</span>
+                            </div>
+                            <div class="woocommerce-product-details__short-description font-size-2 mb-5">
+                                <p class="">{{product.summary}}</p>
+                            </div>
+
+                            <form class="cart d-md-flex align-items-center" method="post" enctype="multipart/form-data">
+                                <div class="quantity mb-4 mb-md-0 d-flex align-items-center">
+                                    <!-- Quantity -->
+                                    <div class="border px-3 width-120">
+                                        <div class="js-quantity">
+                                            <div class="d-flex align-items-center">
+                                                <label class="screen-reader-text sr-only">Quantity</label>
+                                                <a class="js-minus text-dark" href="javascript:;">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="10px"
+                                                        height="1px">
+                                                        <path fill-rule="evenodd" fill="rgb(22, 22, 25)"
+                                                            d="M-0.000,-0.000 L10.000,-0.000 L10.000,1.000 L-0.000,1.000 L-0.000,-0.000 Z" />
+                                                    </svg>
+                                                </a>
+                                                <input type="number"
+                                                    class="input-text qty text js-result form-control text-center border-0"
+                                                    step="1" min="1" max="100" name="quantity" value="1" title="Qty">
+                                                <a class="js-plus text-dark" href="javascript:;">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="10px"
+                                                        height="10px">
+                                                        <path fill-rule="evenodd" fill="rgb(22, 22, 25)"
+                                                            d="M10.000,5.000 L6.000,5.000 L6.000,10.000 L5.000,10.000 L5.000,5.000 L-0.000,5.000 L-0.000,4.000 L5.000,4.000 L5.000,-0.000 L6.000,-0.000 L6.000,4.000 L10.000,4.000 L10.000,5.000 Z" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Quantity -->
+                                </div>
+
+                                <button (click)="addShopping(product)" type="submit" name="add-to-cart" value="7145"
+                                    class=" btn btn-dark border-0 rounded-0 p-3 min-width-250 ml-md-4 single_add_to_cart_button button alt">Add
+                                    to cart</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Nav Classic -->
+            <div class="js-scroll-nav mb-10">
+                <div class="woocommerce-tabs wc-tabs-wrapper  2 mx-lg-auto">
+                    <div id="Description" class="">
+                        <div class="border-top border-bottom">
+                            <ul
+                                class="container tabs wc-tabs nav justify-content-md-center flex-nowrap flex-md-wrap overflow-auto overflow-md-visble">
+                                <li class="flex-shrink-0 flex-md-shrink-1 nav-item active">
+                                    <a class="nav-link py-4 font-weight-medium active" 
+                                    [ngClass]="{'active': navActive1}"
+                                     (click)="scrollNavCheck(1)">
+                                        Description
+                                    </a>
+                                </li>
+                                <li class="flex-shrink-0 flex-md-shrink-1 nav-item">
+                                    <a class="nav-link py-4 font-weight-medium" [ngClass]="{'active': navActive2}" (click)="scrollNavCheck(2)">
+                                        Product Details
+                                    </a>
+                                </li>
+                                <li class="flex-shrink-0 flex-md-shrink-1 nav-item">
+                                    <a class="nav-link py-4 font-weight-medium" [ngClass]="{'active': navActive3}" (click)="scrollNavCheck(3)">
+                                        Reviews (0)
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Tab Content -->
+                        <div *ngIf="scrollNav1" class="tab-content font-size-2 container">
+                            <div class="row">
+                                <div class="col-xl-8 offset-xl-2">
+                                    <div
+                                        class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab pt-9">
+                                        <p>{{product.description}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Tab Content -->
+                        <!-- Tab Content -->
+                        <div *ngIf="scrollNav2" class="tab-content font-size-2 container">
+                            <div class="row">
+                                <div class="col-xl-8 offset-xl-2">
+                                    <div
+                                        class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab pt-9">
+                                        <!-- Mockup Block -->
+                                        <div class="table-responsive mb-4">
+                                            <table class="table table-hover table-borderless">
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="px-4 px-xl-5">Format: </th>
+                                                        <td class="">{{product.format}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="px-4 px-xl-5">Dimensions</th>
+                                                        <td>{{product.dimensions}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="px-4 px-xl-5">Publication date: </th>
+                                                        <td>{{product.publicationDate}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="px-4 px-xl-5">Publisher:</th>
+                                                        <td>{{product.publisher}}</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <th class="px-4 px-xl-5">Language:</th>
+                                                        <td>{{product.language}}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- End Mockup Block -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Tab Content -->
+                        <!-- Tab Content -->
+                        <div *ngIf="scrollNav3" class="tab-content font-size-2 container">
+                            <div class="row">
+                                <div class="col-xl-8 offset-xl-2">
+                                    <div
+                                        class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab pt-9">
+                                        <!-- Mockup Block -->
+                                        <h1 class="font-size-5">Customer Reviews </h1>
+                                    
+
+                                        <ul *ngFor="let ratin of review" class="list-unstyled mb-8">
+                                            <li class="mb-4 pb-5 border-bottom">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <h6 class="mb-0 mr-3">{{ratin.title}}</h6>
+                                                    <div *ngFor="let count of [1, 2, 3, 4, 5]" 
+                                                    class="text-yellow-darker  " style="margin: 0px; padding: 0px;">
+                                                        <small  [ngClass]="count <= ratin.rating ? 'fas fa-star' : 'far fa-star'"></small>
+                                                    </div>
+                                                </div>
+                                                <p class="mb-4 text-lh-md">{{ratin.details}}</p>
+                                                <div class="text-gray-600 mb-4">{{ ratin.createdDate | date: 'dd.MM.yyyy' }}</div>
+                                            </li>
+                                        </ul>
+
+                                        <h4 class="font-size-3 mb-4">Write a Review</h4>
+                                        <div class="d-flex align-items-center mb-6">
+                                            <h6 class="mb-0">Select a rating(required)</h6>
+                                            <div class="write-small text-yellow-darker ml-3 font-size-4">
+                                                <small *ngFor="let i of [1, 2, 3, 4, 5]" (click)="setStar(i)" [ngClass]="star >= i ? 'fas fa-star' : 'far fa-star'" class="far fa-star"></small>
+                                            </div>
+                                        </div>
+                                        <div class="js-form-message form-group mb-4">
+                                            <label for="descriptionTextarea"
+                                                class="form-label text-dark h6 mb-3">Details please! Your review helps
+                                                other shoppers.</label>
+                                            <textarea class="form-control rounded-0 p-4" rows="7" [(ngModel)]="reviewAddModel.details"
+                                                id="descriptionTextarea"
+                                                placeholder="What did you like or dislike? What should other shoppers know before buying?"
+                                                required data-msg="Please enter your message."
+                                                data-error-class="u-has-error"
+                                                data-success-class="u-has-success"></textarea>
+                                        </div>
+                                        <div class="form-group mb-5">
+                                            <label for="inputCompanyName" class="form-label text-dark h6 mb-3">Add a
+                                                title</label>
+                                            <input type="text" [(ngModel)]="reviewAddModel.title" class="form-control rounded-0 px-4" name="companyName"
+                                                id="inputCompanyName" placeholder="3000 characters remaining"
+                                                aria-label="3000 characters remaining">
+                                        </div>
+                                        <div class="d-flex">
+                                            <button type="submit" (click)=" reviewAdd()"
+                                                class="btn btn-dark btn-wide rounded-0 transition-3d-hover">Submit
+                                                Review</button>
+                                        </div>
+                                        <!-- End Mockup Block -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Tab Content -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

@@ -1,0 +1,215 @@
+<div class="page-header border-bottom mb-8">
+    <div class="container">
+        <div class="d-md-flex justify-content-between align-items-center py-4">
+            <h1 class="page-title font-size-3 font-weight-medium m-0 text-lh-lg">Mağaza</h1>
+        </div>
+    </div>
+</div>
+<div class="site-content space-bottom-3" id="content">
+    <div class="container">
+        <div class="row">
+            <div id="primary" class="content-area order-2">
+                <div  class="shop-control-bar d-lg-flex justify-content-between align-items-center mb-5 text-center text-md-left">
+                    <div  class="shop-control-bar__right d-md-flex align-items-center">
+                        <form class="woocommerce-ordering mb-4 m-md-0" method="get">
+                            <!-- Select -->
+                            <select (change)="getAllFilter($event)" class="js-select selectpicker dropdown-select orderby" name="orderby"
+                                data-style="border-bottom shadow-none outline-none py-2">
+                                <option value="default" selected="selected">Varsayılan Sıralama</option>
+                                <option value="price">Fiyat artan</option>
+                                <option value="price-desc">Fiyat azalan</option>
+                            </select>
+                            <!-- End Select -->
+                        </form>
+
+                        <form class="number-of-items ml-md-4 mb-4 m-md-0 d-none d-xl-block" method="get">
+                            <!-- Select -->
+                            <select  (change)="pageSize($event)" class="js-select selectpicker dropdown-select orderby" name="orderby"
+                            data-style="border-bottom shadow-none outline-none py-2" data-width="fit">
+                        <option value="12" selected="selected">12</option>
+                        <option value="15">15</option>
+                        <option value="18">18</option>
+                        <option value="21">21</option>
+                        <option value="24">24</option>
+                    </select>
+                            <!-- End Select -->
+                        </form>
+
+                        <div class="nav nav-tab ml-lg-4 justify-content-center justify-content-md-start ml-md-auto"
+                            id="pills-tab" role="tablist">
+                            <div class="input-group flex-nowrap w-100">
+                                <div class="input-group-prepend">
+                                    <i
+                                        class="glph-icon flaticon-loupe py-2d75 bg-white-100 border-white-100 text-dark pl-3 pr-0 rounded-0"></i>
+                                </div>
+                                <input class="form-control bg-white-100 py-2d75 height-4 border-white-100 rounded-0"
+                                    type="search" placeholder="Kitap Ara" (keyup)="getAll()" [(ngModel)]="searchBook" aria-label="Search">
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Tab Content -->
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-one-example1" role="tabpanel"
+                        aria-labelledby="pills-one-example1-tab">
+                        <!-- Mockup Block -->
+                        <ul
+                            class="products list-unstyled row no-gutters row-cols-2 row-cols-lg-3 row-cols-wd-4 border-top border-left mb-6">
+                            <li *ngFor="let item of response.data" class="product col">
+                                <div class="product__inner overflow-hidden p-3 p-md-4d875">
+                                    <div
+                                        class="woocommerce-LoopProduct-link woocommerce-loop-product__link d-block position-relative">
+                                        <div class="woocommerce-loop-product__thumbnail">
+                                            <a [href]="'/single-product?id=' + item.id" class="d-block"><img
+                                                    [src]="item.coverImageUrl"
+                                                    class="img-fluid d-block mx-auto attachment-shop_catalog size-shop_catalog wp-post-image img-fluid"
+                                                    alt="image-description"></a>
+                                        </div>
+                                        <div class="woocommerce-loop-product__body product__body pt-3 bg-white">
+                                            <div class="text-uppercase font-size-1 mb-1 text-truncate">
+                                                <a>{{item.title}}</a></div>
+                                            <h2
+                                                class="woocommerce-loop-product__title product__title h6 text-lh-md mb-1 text-height-2 crop-text-2 h-dark">
+                                                <a>{{item.summary}}</a></h2>
+                                            <div class="font-size-2  mb-1 text-truncate"><a>{{item.author}}</a></div>
+                                            <div class="price d-flex align-items-center font-weight-medium font-size-3">
+                                                <span class="woocommerce-Price-amount amount"><span
+                                                        class="woocommerce-Price-currencySymbol">₺</span>{{item.price|currency:'':'':'1.2-2'}}</span>
+                                            </div>
+                                        </div>
+                                        <div class="product__hover d-flex align-items-center">
+                                            <a 
+                                                class="text-uppercase text-dark h-dark font-weight-medium mr-auto"
+                                                data-toggle="tooltip" data-placement="right" title=""
+                                                data-original-title="ADD TO CART">
+                                                <span (click)="addShopping(item)" class="widgetCollapseOneCursor product__add-to-cart">ADD TO CART</span>
+                                                <span (click)="addShopping(item)" class=" widgetCollapseOneCursor product__add-to-cart-icon font-size-4"><i
+                                                        class="flaticon-icon-126515"></i></span>
+                                            </a>
+                                            <a href="../shop/single-product-v1.html"
+                                                class="h-p-bg btn btn-outline-primary border-0">
+                                                <i class="flaticon-heart"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- End Mockup Block -->
+                    </div>
+<!-- Pagination -->
+                    <nav aria-label="Page navigation example" style="float: right;">
+                        <ul class="pagination">
+                            <li class="page-item" *ngIf="!response?.isFirstPage">
+                                <a class="page-link" (click)="getAll(response?.pageNumber-1)" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item" [ngClass]="response?.pageNumber===p?'active':''" 
+                                *ngFor="let p of pageNumbers">
+                                <a class="page-link" (click)="getAll(p)">{{p}}</a>
+                            </li>
+                            <li class="page-item" *ngIf="!response?.isLastPage">
+                                <a class="page-link" (click)="getAll(response?.pageNumber+1)" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- End Tab Content -->
+
+<!-- Filter -->
+            </div>
+            <div id="secondary" class="sidebar widget-area order-1" role="complementary">
+                <div id="widgetAccordion">
+                    <div id="woocommerce_product_categories-2"
+                        class=" widget p-4d875 border woocommerce widget_product_categories">
+                        <div id="widgetHeadingOne" class="widget-head">
+                            <a class="d-flex align-items-center justify-content-between text-dark" href="#"
+                                data-toggle="collapse" data-target="#widgetCollapseOne" aria-expanded="true"
+                                aria-controls="widgetCollapseOne">
+
+                                <h3 class="widget-title mb-0 font-weight-medium font-size-3">Kategoriler</h3>
+
+                                <svg class="mins" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" height="2px">
+                                    <path fill-rule="evenodd" fill="rgb(22, 22, 25)"
+                                        d="M0.000,-0.000 L15.000,-0.000 L15.000,2.000 L0.000,2.000 L0.000,-0.000 Z" />
+                                </svg>
+
+                                <svg class="plus" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" height="15px">
+                                    <path fill-rule="evenodd" fill="rgb(22, 22, 25)"
+                                        d="M15.000,8.000 L9.000,8.000 L9.000,15.000 L7.000,15.000 L7.000,8.000 L0.000,8.000 L0.000,6.000 L7.000,6.000 L7.000,-0.000 L9.000,-0.000 L9.000,6.000 L15.000,6.000 L15.000,8.000 Z" />
+                                </svg>
+                            </a>
+                        </div>
+                        <!-- Category -->
+                        <div  id="widgetCollapseOne" class="scrollable-div mt-3 widget-content collapse show"
+                            aria-labelledby="widgetHeadingOne" data-parent="#widgetAccordion">
+                            <ul>    
+                                <li class="cat-item cat-item-9 cat-parent ">
+                                    <a class="widgetCollapseOneCursor" (click)="  categoryReset()">Tüm kategoriler</a>     
+                                </li>
+                            </ul>
+                            <ul *ngFor="let item of category"  class="product-categories ">
+                                <li class="cat-item cat-item-9 cat-parent ">
+                                    <a class="widgetCollapseOneCursor" (click)="categoryFilter(item.id)">{{item.name}}</a>     
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Author -->
+                    <div id="Authors" class="widget widget_search widget_author p-4d875 border">
+                        <div id="widgetHeading21" class="widget-head">
+                            <a class="d-flex align-items-center justify-content-between text-dark" href="#"
+                                data-toggle="collapse" data-target="#widgetCollapse21" aria-expanded="true"
+                                aria-controls="widgetCollapse21">
+
+                                <h3 class="widget-title mb-0 font-weight-medium font-size-3">Yazarlar</h3>
+
+                                <svg class="mins" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" height="2px">
+                                    <path fill-rule="evenodd" fill="rgb(22, 22, 25)"
+                                        d="M0.000,-0.000 L15.000,-0.000 L15.000,2.000 L0.000,2.000 L0.000,-0.000 Z" />
+                                </svg>
+
+                                <svg class="plus" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" height="15px">
+                                    <path fill-rule="evenodd" fill="rgb(22, 22, 25)"
+                                        d="M15.000,8.000 L9.000,8.000 L9.000,15.000 L7.000,15.000 L7.000,8.000 L0.000,8.000 L0.000,6.000 L7.000,6.000 L7.000,-0.000 L9.000,-0.000 L9.000,6.000 L15.000,6.000 L15.000,8.000 Z" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div id="widgetCollapse21" class="scrollable-div mt-4 widget-content collapse show"
+                            aria-labelledby="widgetHeading21" data-parent="#widgetAccordion">
+                                <div class="input-group flex-nowrap w-100">
+                                    <div class="input-group-prepend">
+                                        <i
+                                            class="glph-icon flaticon-loupe py-2d75 bg-white-100 border-white-100 text-dark pl-3 pr-0 rounded-0"></i>
+                                    </div>
+                                    <input class="form-control bg-white-100 py-2d75 height-4 border-white-100 rounded-0"
+                                    type="search" placeholder="Yazar Ara" [(ngModel)]="searchAuthor" aria-label="Search">
+                                </div>
+                                <button class="btn btn-outline-success my-2 my-sm-0 sr-only"
+                                    type="submit">Search</button>
+                          
+                            <ul class="product-categories">
+                                <li  class="cat-item cat-item-9 cat-parent">
+                                    <a (click)="authorReset()" >Tüm Yazarlar</a>
+                                </li>
+                                <li *ngFor="let item of author | authorr:searchAuthor" class="cat-item cat-item-9 cat-parent">
+                                    <a class="widgetCollapseOneCursor" (click)="authorFilter(item.author)" >{{item.author}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

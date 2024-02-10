@@ -1,0 +1,8 @@
+.coverFeaturedImage{
+    object-fit: contain;
+    width: 300px;
+    height: 452px;
+}
+.widgetCollapseOneCursor{
+    cursor: pointer;
+  }

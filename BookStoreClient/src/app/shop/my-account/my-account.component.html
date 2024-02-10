@@ -1,0 +1,120 @@
+<main id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 border-right">
+                <h6 class="font-weight-medium font-size-7 pt-5 pt-lg-8  mb-5 mb-lg-7">Hesabım</h6>
+                <div class="tab-wrapper">
+                    <ul class="my__account-nav nav flex-column mb-0" role="tablist" id="pills-tab">
+                        <li class="nav-item mx-0">
+                            <a class="nav-link d-flex align-items-center px-0" id="pills-two-example1-tab" data-toggle="pill" href="#pills-two-example1" (click)="getAllOrder()" role="tab" aria-controls="pills-two-example1" aria-selected="false">
+                                <span class="font-weight-normal text-gray-600">Siparişler</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mx-0">
+                            <a class="nav-link d-flex align-items-center px-0" id="pills-four-example1-tab" data-toggle="pill" href="#pills-four-example1" (click)="getAllAddress()"  role="tab" aria-controls="pills-four-example1" aria-selected="false">
+                                <span class="font-weight-normal text-gray-600">Adresler</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mx-0">
+                            <a class="nav-link d-flex align-items-center px-0" id="pills-five-example1-tab" data-toggle="pill" href="#pills-five-example1" role="tab" aria-controls="pills-five-example1" aria-selected="false">
+                                <span class="font-weight-normal text-gray-600">Hesap Detay</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mx-0">
+                            <a (click)="logout()" class="nav-link d-flex align-items-center px-0" href="#">
+                                <span class="font-weight-normal text-gray-600">Çıkış</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-one-example1" role="tabpanel" aria-labelledby="pills-one-example1-tab">
+                        <div class="pt-5 pt-lg-8 pl-md-5 pl-lg-9 space-bottom-2 space-bottom-lg-3 mb-xl-1">
+                            <h6 class="font-weight-medium font-size-7 ml-lg-1 mb-lg-8 pb-xl-1">Gösterge Paneli</h6>
+       
+                            <div class="mb-4">
+                                <p class="mb-0 font-size-2 ml-lg-1 text-gray-600">Hesap kontrol panelinizden son siparişlerinizi görüntüleyebilir , teslimat ve fatura adreslerinizi yönetebilir , şifrenizi ve hesap ayrıntılarınızı düzenleyebilirsiniz .</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-two-example1" role="tabpanel" aria-labelledby="pills-two-example1-tab">
+                        <div class="pt-5 pl-md-5 pt-lg-8 pl-lg-9 space-bottom-lg-2 mb-lg-4">
+                            <h6 class="font-weight-medium font-size-7 ml-lg-1 mb-lg-8 pb-xl-1">siparişler</h6>
+                            <table class="table">
+                                <thead>
+                                    <tr class="border">
+                                        <th scope="col" class="py-3 border-bottom-0 font-weight-medium pl-3 pl-lg-5">Sipariş</th>
+                                        <th scope="col" class="py-3 border-bottom-0 font-weight-medium">Tarih</th>
+                                        <th scope="col" class="py-3 border-bottom-0 font-weight-medium">Durum</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody *ngFor="let item of orderList">
+                                    <tr class="border">
+                                        <th class="pl-3 pl-md-5 font-weight-normal align-middle py-6">{{item.orderNumber}}</th>
+                                        <td class="align-middle py-5">{{item.paymentDate| date:'dd.MM.yyyy'}}</td>
+                                        <td class="align-middle py-5">{{item.paymentType}}</td>                                   
+                                    </tr>
+                                </tbody>
+                                
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-four-example1" role="tabpanel" aria-labelledby="pills-four-example1-tab">
+                        <div class="pt-5 pl-md-5 pt-lg-8 pl-lg-9 space-bottom-2 mb-lg-4">
+                            <h6 class="font-weight-medium font-size-7 ml-lg-1 mb-5 mb-lg-8 pb-xl-1">Addresses</h6>
+                            
+                                <table class="table">
+                                    <thead>
+                                        <tr class="border">
+                                            <th scope="col" class="py-3 border-bottom-0 font-weight-medium pl-3 pl-lg-5">Adres Adı</th>
+                                            <th scope="col" class="py-3 border-bottom-0 font-weight-medium">Alıcı</th>
+                                            <th scope="col" class="py-3 border-bottom-0 font-weight-medium">Şehir</th>
+                                        </tr>
+                                    </thead>
+    
+                                    <tbody *ngFor="let item of addressList">
+                                        <tr class="border">
+                                            <th class="pl-3 pl-md-5 font-weight-normal align-middle py-6">{{item.addressName}}</th>
+                                            <td class="align-middle py-5">{{item.name}}</td>
+                                            <td class="align-middle py-5">{{item.city}}</td>    
+                                                         
+                                        </tr>
+                                    </tbody>
+                                    
+                                </table>
+                            </div>
+                        </div>
+                    
+                    <div class="tab-pane fade" id="pills-five-example1" role="tabpanel" aria-labelledby="pills-five-example1-tab">
+                        <div class="border-bottom mb-6 pb-6 mb-lg-8 pb-lg-9">
+                            <div class="pt-5 pl-md-5 pt-lg-8 pl-lg-9">
+                                <h6 class="font-weight-medium font-size-7 ml-lg-1 mb-lg-8 pb-xl-1">Kullanıcı Detayı</h6>
+   
+                                <div class="row">
+                                    
+                                    <div class="col-md-12 mb-4 mb-md-0">
+                                        <div class="js-form-message">
+                                            <label for="exampleFormControlInput4">Kullanıcı Adı</label>
+                                            <input type="text" class="form-control rounded-0" aria-label="Jack Wayley" required="" disabled value='{{auth.token.name }}'  data-error-class="u-has-error" data-msg="Please enter your name." data-success-class="u-has-success">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 mb-4 mb-md-0" style="margin-top: 20px;">
+                                        <div class="js-form-message">
+                                            <label for="exampleFormControlInput4">Email</label>
+                                            <input type="text" class="form-control rounded-0"  aria-label="Jack Wayley" required="" disabled value='{{auth.token.email }}' data-error-class="u-has-error" data-msg="Please enter your name." data-success-class="u-has-success">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

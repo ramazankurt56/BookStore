@@ -1,0 +1,265 @@
+  
+  <!-- Slide -->
+  <section class="space-bottom-3">
+        <div class="bg-gray-200 space-2 space-lg-0 bg-img-hero" style="background-image: url(../../assets/img/1920x588/img1.jpg);">
+            <div class="container">
+                <div class="js-slick-carousel u-slick"
+                    data-pagi-classes="text-center u-slick__pagination position-absolute right-0 left-0 mb-n8 mb-lg-4 bottom-0">
+                    <div  class="js-slide">
+                        
+                        <div class="hero row min-height-588 align-items-center">
+                            <div class="col-lg-7 col-wd-6 mb-4 mb-lg-0">
+                                <div class="media-body mr-wd-4 align-self-center mb-4 mb-md-0">
+                                    <p class="hero__pretitle text-uppercase font-weight-bold text-gray-400 mb-2"
+                                    data-scs-animation-in="fadeInUp"
+                                    data-scs-animation-delay="200">Daima En iyisi Biziz</p>
+                                    <h2 class="hero__title font-size-14 mb-4"
+                                    data-scs-animation-in="fadeInUp"
+                                    data-scs-animation-delay="300">
+                                        <span class="hero__title-line-1 font-weight-regular d-block">Öne Çıkan Kitaplar</span>
+                                        <span class="hero__title-line-2 font-weight-bold d-block">{{ date.toLocaleString('tr-TR', { month: 'long' }) }}</span>
+                                    </h2>
+                                    <a href="#featurehref" class="btn btn-dark btn-wide rounded-0 hero__btn"
+                                    data-scs-animation-in="fadeInLeft"
+                                    data-scs-animation-delay="400">Daha Fazla Gör</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-wd-6"
+                            data-scs-animation-in="fadeInRight"
+                            data-scs-animation-delay="500">
+                                <img class="img-fluid coverFeaturedImage" [src]="featuredBooks[0]?.coverImageUrl">
+                          
+                        </div>
+                    </div>
+                    </div>
+                    <div  class="js-slide">
+                        
+                        <div class="hero row min-height-588 align-items-center">
+                            <div class="col-lg-7 col-wd-6 mb-4 mb-lg-0">
+                                <div class="media-body mr-wd-4 align-self-center mb-4 mb-md-0">
+                                    <p class="hero__pretitle text-uppercase font-weight-bold text-gray-400 mb-2"
+                                    data-scs-animation-in="fadeInUp"
+                                    data-scs-animation-delay="200">Daima En iyisi Biziz</p>
+                                    <h2 class="hero__title font-size-14 mb-4"
+                                    data-scs-animation-in="fadeInUp"
+                                    data-scs-animation-delay="300">
+                                        <span class="hero__title-line-1 font-weight-regular d-block">Trend Kitaplar</span>
+                                        <span class="hero__title-line-2 font-weight-bold d-block">{{ date.toLocaleString('tr-TR', { month: 'long' }) }}</span>
+                                    </h2>
+                                    <a  href="#trendhref" class="btn btn-dark btn-wide rounded-0 hero__btn"
+                                    data-scs-animation-in="fadeInLeft"
+                                    data-scs-animation-delay="400">Daha Fazla Gör</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-wd-6"
+                            data-scs-animation-in="fadeInRight"
+                            data-scs-animation-delay="500">
+                                <img class="img-fluid coverFeaturedImage" [src]="trendingBooks[1]?.coverImageUrl">
+                          
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<div  class="container space-top-2">
+    <header class="d-md-flex justify-content-between align-items-center mb-5">
+        <h2 id="trendhref" class="font-size-7 mb-4 mb-md-0">Trend Olan Kitaplar</h2>
+    </header>
+    <ul  class="products list-unstyled mb-0 row row-cols-2 row-cols-md-3 row-cols-xl-4 row-cols-wd-5">
+        <li *ngFor="let trend of trendingBooks" class="col">
+            <div class="product product__space product__space-primary border rounded-md bg-white mb-5">
+                <div class="product__inner overflow-hidden p-3 p-md-4d875">
+                    <div class="woocommerce-LoopProduct-link woocommerce-loop-product__link d-block position-relative">
+                        <div class="woocommerce-loop-product__thumbnail">
+                            <a [href]="'/single-product?id=' + trend.id" class="d-block"><img [src]="trend.coverImageUrl" class="d-block mx-auto attachment-shop_catalog size-shop_catalog wp-post-image img-fluid" alt="image-description"></a>
+                        </div>
+                        <div class="woocommerce-loop-product__body product__body pt-3 bg-white">
+                            <div class="text-uppercase font-size-1 mb-1 text-truncate"><a>{{trend.title}}</a></div>
+                            <h2 class="woocommerce-loop-product__title product__title h6 text-lh-md mb-1 text-height-2 crop-text-2 h-dark"><a >{{trend.summary}}</a></h2>
+                            <div class="font-size-2  mb-1 text-truncate"><a class="text-gray-700">{{trend.author}}</a></div>
+                            <div class="price d-flex align-items-center font-weight-medium font-size-3">
+                                <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">₺</span>{{trend.price|currency:'':'':'1.2-2'}}</span>
+                            </div>
+
+                        </div>
+                        <div class="product__hover d-flex align-items-center">
+                            <a class="text-uppercase text-dark h-dark font-weight-medium mr-auto">
+                                <span (click)="addShopping(trend)" class="widgetCollapseOneCursor product__add-to-cart">ADD TO CART</span>
+                                <span (click)="addShopping(trend)" class="widgetCollapseOneCursor product__add-to-cart-icon font-size-4"><i class="flaticon-icon-126515"></i></span>
+                            </a>
+                            <a href="#" class="h-p-bg btn btn-outline-primary border-0">
+                                <i class="flaticon-heart"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+       
+    </ul>
+</div>
+    <!-- Featured Books -->
+    <section id="featurehref" class="space-bottom-3">
+        <header class="mb-4 container">
+            <h2 class="font-size-7 text-center">Featured Books</h2>
+        </header>
+        <div class="container">
+            <ul class="nav justify-content-md-center nav-gray-700 mb-5 flex-nowrap flex-md-wrap overflow-auto overflow-md-visible" id="featuredBooks" role="tablist">
+                <li class="nav-item mx-5 mb-1 flex-shrink-0 flex-md-shrink-1">
+                    <a class="nav-link px-0 active" id="featured-tab" data-toggle="tab" href="#featured" role="tab" aria-controls="featured" aria-selected="true">Featured</a>
+                </li>
+                <li class="nav-item mx-5 mb-1 flex-shrink-0 flex-md-shrink-1">
+                    <a class="nav-link px-0" id="onsale-tab" data-toggle="tab" href="#onsale" role="tab" aria-controls="onsale" aria-selected="false">On Sale</a>
+                </li>
+                <li class="nav-item mx-5 mb-1 flex-shrink-0 flex-md-shrink-1">
+                    <a class="nav-link px-0" id="mostviewed-tab" data-toggle="tab" href="#mostviewed" role="tab" aria-controls="mostviewed" aria-selected="false">Most Viewed</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="featuredBooksContent">
+                <div class="tab-pane fade show active" id="featured" role="tabpanel" aria-labelledby="featured-tab">
+                    <ul class="products list-unstyled row no-gutters row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-wd-6 border-top border-left my-0">
+                        <li *ngFor="let item of featuredBooks.slice(0, 12);" class="product col">
+                            <div class="product__inner overflow-hidden p-3 p-md-4d875">
+                                <div class="woocommerce-LoopProduct-link woocommerce-loop-product__link d-block position-relative">
+                                    <div class="woocommerce-loop-product__thumbnail">
+                                        <a [href]="'/single-product?id=' + item.id"  class="d-block"><img [src]="item.coverImageUrl" class="img-fluid d-block mx-auto attachment-shop_catalog size-shop_catalog wp-post-image img-fluid" ></a>
+                                    </div>
+                                    <div class="woocommerce-loop-product__body product__body pt-3 bg-white">
+                                        <div class="text-uppercase font-size-1 mb-1 text-truncate"><a>{{item.publisher}}</a></div>
+                                        <h2 class="woocommerce-loop-product__title product__title h6 text-lh-md mb-1 text-height-2 crop-text-2 h-dark"><a   >{{item.title}}</a></h2>
+                                        <div class="font-size-2  mb-1 text-truncate">
+                                            <a  class="text-gray-700">{{item.author}}</a></div>
+                                        <div class="price d-flex align-items-center font-weight-medium font-size-3">
+                                            <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>{{item.price|currency:'':'':'1.2-2'}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="product__hover d-flex align-items-center">
+                                        <a  class="text-uppercase text-dark h-dark font-weight-medium mr-auto" data-toggle="tooltip" data-placement="right" title="ADD TO CART">
+                                            <span  (click)="addShopping(item)" class="widgetCollapseOneCursor product__add-to-cart">ADD TO CART</span>
+                                            <span (click)="addShopping(item)" class="widgetCollapseOneCursor product__add-to-cart-icon font-size-4"><i class="flaticon-icon-126515"></i></span>
+                                        </a>
+                                        <a href="../shop/single-product-v1.html" class="h-p-bg btn btn-outline-primary border-0">
+                                            <i class="flaticon-heart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="onsale" role="tabpanel" aria-labelledby="onsale-tab">
+                    <ul class="products list-unstyled row no-gutters row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-wd-6 border-top border-left my-0">
+                        <li *ngFor="let item of featuredBooks;" class="product col">
+                            <div class="product__inner overflow-hidden p-3 p-md-4d875">
+                                <div class="woocommerce-LoopProduct-link woocommerce-loop-product__link d-block position-relative">
+                                    <div class="woocommerce-loop-product__thumbnail">
+                                        <a [href]="'/single-product?id=' + item.id"  class="d-block"><img [src]="item.coverImageUrl" class="img-fluid d-block mx-auto attachment-shop_catalog size-shop_catalog wp-post-image img-fluid" ></a>
+                                    </div>
+                                    <div class="woocommerce-loop-product__body product__body pt-3 bg-white">
+                                        <div class="text-uppercase font-size-1 mb-1 text-truncate"><a >{{item.publisher}}</a></div>
+                                        <h2 class="woocommerce-loop-product__title product__title h6 text-lh-md mb-1 text-height-2 crop-text-2 h-dark"><a >{{item.title}}</a></h2>
+                                        <div class="font-size-2  mb-1 text-truncate">
+                                            <a class="text-gray-700">{{item.author}}</a></div>
+                                        <div class="price d-flex align-items-center font-weight-medium font-size-3">
+                                            <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>{{item.price|currency:'':'':'1.2-2'}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="product__hover d-flex align-items-center">
+                                        <a href="../shop/single-product-v1.html" class="text-uppercase text-dark h-dark font-weight-medium mr-auto" data-toggle="tooltip" data-placement="right" title="ADD TO CART">
+                                            <span class="product__add-to-cart">ADD TO CART</span>
+                                            <span class="product__add-to-cart-icon font-size-4"><i class="flaticon-icon-126515"></i></span>
+                                        </a>
+                                        <a href="../shop/single-product-v1.html" class="h-p-bg btn btn-outline-primary border-0">
+                                            <i class="flaticon-heart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="mostviewed" role="tabpanel" aria-labelledby="mostviewed-tab">
+                   <ul class="products list-unstyled row no-gutters row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-wd-6 border-top border-left my-0">
+                    <li *ngFor="let item of featuredBooks;" class="product col">
+                        <div class="product__inner overflow-hidden p-3 p-md-4d875">
+                            <div class="woocommerce-LoopProduct-link woocommerce-loop-product__link d-block position-relative">
+                                <div class="woocommerce-loop-product__thumbnail">
+                                    <a [href]="'/single-product?id=' + item.id"  class="d-block"><img [src]="item.coverImageUrl" class="img-fluid d-block mx-auto attachment-shop_catalog size-shop_catalog wp-post-image img-fluid" ></a>
+                                </div>
+                                <div class="woocommerce-loop-product__body product__body pt-3 bg-white">
+                                    <div class="text-uppercase font-size-1 mb-1 text-truncate"><a>{{item.publisher}}</a></div>
+                                    <h2 class="woocommerce-loop-product__title product__title h6 text-lh-md mb-1 text-height-2 crop-text-2 h-dark"><a >{{item.title}}</a></h2>
+                                    <div class="font-size-2  mb-1 text-truncate">
+                                        <a  class="text-gray-700">{{item.author}}</a></div>
+                                    <div class="price d-flex align-items-center font-weight-medium font-size-3">
+                                        <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>{{item.price|currency:'':'':'1.2-2'}}</span>
+                                    </div>
+                                </div>
+                                <div class="product__hover d-flex align-items-center">
+                                    <a  class="text-uppercase text-dark h-dark font-weight-medium mr-auto" data-toggle="tooltip" data-placement="right" title="ADD TO CART">
+                                        <span (click)="addShopping(item)" class="widgetCollapseOneCursor product__add-to-cart">ADD TO CART</span>
+                                        <span (click)="addShopping(item)" class="widgetCollapseOneCursor product__add-to-cart-icon font-size-4"><i class="flaticon-icon-126515"></i></span>
+                                    </a>
+
+                                    <a href="../shop/single-product-v1.html" class="h-p-bg btn btn-outline-primary border-0">
+                                        <i class="flaticon-heart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Biographies Books Slide -->
+    <div class="bg-punch-light product-editors-choice">
+        <div class="container position-relative space-3">
+            <div class="row align-items-center position-relative z-index-2">
+                <div class="col-lg-4 mb-6 mb-lg-0">
+                    <h6 class="text-gray-400 font-weight-bold">PERSONELİMİZ TARAFINDAN AYLIK SEÇİLEN KİTAP</h6>
+                    <h2 class="mb-6 text-dark font-size-7">Seçilmiş Kitaplar</h2>
+                </div>
+                <div class="col-lg-8">
+                    <ul class="row row-cols-2 row-cols-md-4 row-cols-lg-3 row-cols-wd-4 list-unstyled mb-0  products">
+                        <li *ngFor="let selected of selectedBooks" class="col">
+                            <div class="mb-4 mb-md-0">
+                                <div class="product  product__space product__space-primary rounded-md bg-white">
+                                    <div class="product__inner overflow-hidden p-3 p-lg-4d875">
+                                        <div class="woocommerce-LoopProduct-link woocommerce-loop-product__link d-block position-relative">
+                                            <div class="woocommerce-loop-product__thumbnail">
+                                                <a [href]="'/single-product?id=' + selected.id" class="d-block"><img [src]="selected.coverImageUrl" class="d-block mx-auto attachment-shop_catalog size-shop_catalog wp-post-image img-fluid" alt="image-description"></a>
+                                            </div>
+                                            <div class="woocommerce-loop-product__body product__body pt-3 bg-white">
+                                                <div class="text-uppercase font-size-1 mb-1 text-truncate"><a>{{selected.title}}</a></div>
+                                                <h2 class="woocommerce-loop-product__title product__title h6 text-lh-md mb-1 text-height-2 crop-text-2 h-dark"><a >{{selected.summary}}</a></h2>
+                                                <div class="font-size-2  mb-1 text-truncate"><a class="text-gray-700">{{selected.author}}</a></div>
+                                                <div class="price d-flex align-items-center font-weight-medium font-size-3">
+                                                    <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">₺</span>{{selected.price|currency:'':'':'1.2-2'}}</span>
+                                                </div>
+    
+                                            </div>
+                                            <div class="product__hover d-flex align-items-center">
+                                                <a class="text-uppercase text-dark h-dark font-weight-medium mr-auto">
+                                                    <span (click)="addShopping(selected)" class="widgetCollapseOneCursor product__add-to-cart">ADD TO CART</span>
+                                                    <span (click)="addShopping(selected)" class="widgetCollapseOneCursor product__add-to-cart-icon font-size-4"><i class="flaticon-icon-126515"></i></span>
+                                                </a>
+                                                <a href="#" class="h-p-bg btn btn-outline-primary border-0">
+                                                    <i class="flaticon-heart"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <h1 class="text-stroke-1 font-size-xl-160 mb-0 position-absolute bottom-0">Seçilmiş Kitaplar</h1>
+        </div>
+    </div>

@@ -1,0 +1,356 @@
+<div class="page-header border-bottom">
+    <div class="container">
+        <div class="d-md-flex justify-content-between align-items-center py-4">
+            <h1 class="page-title font-size-3 font-weight-medium m-0 text-lh-lg">Shop Single</h1>
+            <nav class="woocommerce-breadcrumb font-size-2">
+                <a href="#" class="h-primary">Home</a>
+                <span class="breadcrumb-separator mx-1"><i class="fas fa-angle-right"></i></span>
+                <a href="#" class="h-primary">Shop</a>
+                <span class="breadcrumb-separator mx-1"><i class="fas fa-angle-right"></i></span>Shop Single
+            </nav>
+        </div>
+    </div>
+</div>
+<div id="content" class="site-content bg-punch-light space-bottom-3">
+    <div class="col-full  ">
+        <div id="primary" class="content-area container">
+            <main id="main" class="site-main">
+                <article id="post-6" class="post-6 page type-page status-publish hentry">
+                    <header class="entry-header space-top-2 space-bottom-1 mb-2">
+                        <h4 class="entry-title font-size-7 text-center">Checkout</h4>
+                    </header>
+                    <!-- .entry-header -->
+                    <div class="entry-content">
+                        <div class="woocommerce">
+                            <form name="checkout" method="post" class="checkout woocommerce-checkout row mt-8"
+                                action="https://themes.woocommerce.com/storefront/checkout/"
+                                enctype="multipart/form-data" novalidate="novalidate">
+                                <div class="col2-set col-md-6 col-lg-7 col-xl-7 mb-6 mb-md-0" id="customer_details">
+                                    <div class="px-4 pt-5 bg-white border">
+                                        <div class="woocommerce-billing-fields">
+                                            <p class="col-12 mb-4d75 form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated"
+                                                id="address_field" data-priority="40">
+                                                <label for="address" class="form-label">Kayıtlı Adresler</label>
+                                                <!-- <select [(ngModel)]="selectedName" (ngModelChange)="addressSelected()"  name="address" id="address" class="form-control country_to_state country_select  select2-hidden-accessible"
+                                                    autocomplete="address" tabindex="-1" aria-hidden="true">
+                                                    <option *ngFor="let item of addressSet" [value]="item.addressName">{{ item.addressName }}</option>
+                                                </select> -->
+                                                <select [(ngModel)]="addressName" name="address" id="address"
+                                                    class="form-control country_to_state country_select select2-hidden-accessible"
+                                                    autocomplete="address" tabindex="-1" aria-hidden="true"
+                                                    (change)="addressSelected(addressName)">
+                                                    <option *ngFor="let item of addressSet" [value]="item.addressName">
+                                                        {{ item.addressName }}</option>
+                                                </select>
+
+                                            </p>
+                                            <h3 class="mb-4 font-size-3">Fatura Detayı</h3>
+                                            <p class="col-12 mb-3 form-row form-row-wide address-field validate-required"
+                                                id="billing_address_name_1_field" data-priority="50">
+                                                <label for="billing_address_name" class="form-label">Adres Adı <abbr
+                                                        class="required" title="required">*</abbr></label>
+                                                <input type="text" [(ngModel)]="addressName"
+                                                    class="input-text form-control" name="billing_address_name"
+                                                    id="billing_address_name" placeholder="Evim, İş yerim" value=""
+                                                    autocomplete="billing_address_name">
+                                            </p>
+                                            <div class="woocommerce-billing-fields__field-wrapper row">
+                                                <p class="col-lg-6 mb-4d75 form-row form-row-first validate-required woocommerce-invalid woocommerce-invalid-required-field"
+                                                    id="billing_first_name_field" data-priority="10">
+                                                    <label for="billing_first_name" class="form-label">İsim<abbr
+                                                            class="required" title="required">*</abbr></label>
+                                                    <input [(ngModel)]="firstName" type="text"
+                                                        class="input-text form-control" name="billing_first_name"
+                                                        id="billing_first_name" placeholder="" value=""
+                                                        autocomplete="given-name" autofocus="autofocus">
+                                                </p>
+
+                                                <p class="col-lg-6 mb-4d75 form-row form-row-last validate-required"
+                                                    id="billing_last_name_field" data-priority="20">
+                                                    <label for="billing_last_name" class="form-label">Soy İsim <abbr
+                                                            class="required" title="required">*</abbr></label>
+                                                    <input [(ngModel)]="lastName" type="text"
+                                                        class="input-text form-control" name="billing_last_name"
+                                                        id="billing_last_name" placeholder="" value=""
+                                                        autocomplete="family-name">
+                                                </p>
+                                                <p class="col-12 mb-4d75 form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated"
+                                                    id="billing_city_field" data-priority="40">
+                                                    <label for="billing_city" class="form-label">Şehir <abbr
+                                                            class="required" title="required">*</abbr></label>
+                                                    <select [(ngModel)]="selectedCity"
+                                                        (ngModelChange)="updateDistricts()" name="billing_city"
+                                                        id="billing_city"
+                                                        class="form-control country_to_state country_select  select2-hidden-accessible"
+                                                        autocomplete="country" tabindex="-1" aria-hidden="true">
+                                                        <option *ngFor="let city of cities" [value]="city">{{ city }}
+                                                        </option>
+                                                    </select>
+                                                </p>
+                                                <p class="col-12 mb-4d75 form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated"
+                                                    id="billing_district_field" data-priority="40">
+                                                    <label for="billing_district" class="form-label">İlçe <abbr
+                                                            class="required" title="required">*</abbr></label>
+                                                    <select [(ngModel)]="selectedDistrict" name="billing_district"
+                                                        id="billing_district"
+                                                        class="form-control country_to_state country_select  select2-hidden-accessible"
+                                                        autocomplete="country" tabindex="-1" aria-hidden="true">
+                                                        <option *ngFor="let district of districts" [value]="district">{{
+                                                            district }}</option>
+                                                    </select>
+                                                </p>
+
+                                                <p class="col-12 mb-3 form-row form-row-wide address-field validate-required"
+                                                    id="billing_address_1_field" data-priority="50">
+                                                    <label for="billing_address_1" class="form-label">Açık adres <abbr
+                                                            class="required" title="required">*</abbr></label>
+                                                    <input [(ngModel)]="addressField" type="text"
+                                                        class="input-text form-control" name="billing_address_1"
+                                                        id="billing_address_1" placeholder="Ev numarası ve sokak adı"
+                                                        value="" autocomplete="address-line1">
+                                                </p>
+
+
+                                                <p class="col-12 mb-4d75 form-row form-row-wide address-field validate-postcode validate-required"
+                                                    id="billing_postcode_field" data-priority="90"
+                                                    data-o_class="form-row form-row-wide address-field validate-required validate-postcode">
+                                                    <label for="billing_postcode" class="form-label">Posta Kodu <abbr
+                                                            class="required" title="required">*</abbr></label>
+                                                    <input [(ngModel)]="postCode" type="text"
+                                                        class="input-text form-control" name="billing_postcode"
+                                                        id="billing_postcode" placeholder="" value=""
+                                                        autocomplete="postal-code">
+                                                </p>
+
+                                                <p class="col-12 mb-4d75 form-row form-row-first validate-required validate-phone"
+                                                    id="billing_phone_field" data-priority="100">
+                                                    <label for="billing_phone" class="form-label">Telefon <abbr
+                                                            class="required" title="required">*</abbr></label>
+                                                    <input [(ngModel)]="telephone" type="tel"
+                                                        class="input-text form-control" name="billing_phone"
+                                                        id="billing_phone" placeholder="" value="" autocomplete="tel">
+                                                </p>
+
+                                                <p class="col-12 mb-4d75 form-row form-row-last validate-required validate-email"
+                                                    id="billing_email_field" data-priority="110">
+                                                    <label for="billing_email" class="form-label">Email <abbr
+                                                            class="required" title="required">*</abbr></label>
+                                                    <input [(ngModel)]="email" type="email"
+                                                        class="input-text form-control" name="billing_email"
+                                                        id="billing_email" placeholder="" value="" autocomplete="email">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="px-4 pt-5 bg-white border border-top-0 mt-n-one">
+                                        <div class="woocommerce-additional-fields">
+                                            <h3 class="mb-4 font-size-3">Ek Bilgiler </h3>
+                                            <div class="woocommerce-additional-fields__field-wrapper">
+                                                <p class="col-12 mb-4d75 px-0 form-row notes" id="order_comments_field"
+                                                    data-priority="">
+                                                    <label for="order_comments" class="form-label">Sipariş notları
+                                                        (isteğe bağlı)</label>
+                                                    <textarea [(ngModel)]="orderNote" name="order_comments"
+                                                        class="input-text form-control" id="order_comments"
+                                                        placeholder="Siparişinizle ilgili notlar" rows="8"
+                                                        cols="5"></textarea>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <h3 id="order_review_heading" class="d-none">Siparişiniz</h3>
+
+                                <div id="order_review"
+                                    class="col-md-6 col-lg-5 col-xl-5 woocommerce-checkout-review-order">
+                                    <div id="checkoutAccordion" class="border border-gray-900 bg-white mb-5">
+                                        <div class="p-4d875 border">
+                                            <div id="checkoutHeadingOnee" class="checkout-head">
+                                                <a href="#"
+                                                    class="text-dark d-flex align-items-center justify-content-between"
+                                                    data-toggle="collapse" data-target="#checkoutCollapseOnee"
+                                                    aria-expanded="true" aria-controls="checkoutCollapseOnee">
+
+                                                    <h3 class="checkout-title mb-0 font-weight-medium font-size-3">
+                                                        Siparişiniz</h3>
+
+                                                    <svg class="mins" xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="15px"
+                                                        height="2px">
+                                                        <path fill-rule="evenodd" fill="rgb(22, 22, 25)"
+                                                            d="M0.000,-0.000 L15.000,-0.000 L15.000,2.000 L0.000,2.000 L0.000,-0.000 Z" />
+                                                    </svg>
+
+                                                    <svg class="plus" xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="15px"
+                                                        height="15px">
+                                                        <path fill-rule="evenodd" fill="rgb(22, 22, 25)"
+                                                            d="M15.000,8.000 L9.000,8.000 L9.000,15.000 L7.000,15.000 L7.000,8.000 L0.000,8.000 L0.000,6.000 L7.000,6.000 L7.000,-0.000 L9.000,-0.000 L9.000,6.000 L15.000,6.000 L15.000,8.000 Z" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+
+                                            <div *ngFor="let item of shoppingCarts" id="checkoutCollapseOnee"
+                                                class="mt-4 checkout-content collapse show"
+                                                aria-labelledby="checkoutHeadingOnee" data-parent="#checkoutAccordion">
+                                                <table class="shop_table woocommerce-checkout-review-order-table">
+
+                                                    <tbody>
+                                                        <tr class="cart_item">
+                                                            <td class="product-name" style="padding-right: 30px; ">
+                                                                {{item.title}}&nbsp; <strong
+                                                                    class="product-quantity">x{{item.quantity}}</strong>
+                                                            </td>
+                                                            <td class="product-total">
+                                                                <span class="woocommerce-Price-amount amount"><span
+                                                                        class="woocommerce-Price-currencySymbol">
+                                                                        ₺</span>{{item.price|currency:'':'':'1.2-2'}}</span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="p-4d875 border">
+                                            <table class="shop_table shop_table_responsive">
+                                                <tbody>
+                                                    <tr class="order-total">
+                                                        <th>Toplam</th>
+                                                        <td data-title="Total"><strong><span
+                                                                    class="woocommerce-Price-amount amount"><span
+                                                                        class="woocommerce-Price-currencySymbol">₺</span>
+                                                                    {{totalPrice|currency:'':'':'1.2-2'}}
+                                                                </span></strong> </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <div class="p-4d875 border">
+                                            <div id="checkoutHeadingOnee" class="checkout-head">
+                                                <a class="text-dark d-flex align-items-center justify-content-between"
+                                                    data-toggle="collapse" data-target="#checkoutCollapseOnee"
+                                                    aria-expanded="true" aria-controls="checkoutCollapseOnee">
+
+                                                    <h3 class="checkout-title mb-0 font-weight-medium font-size-3">Kart
+                                                        Bilgileriniz</h3>
+
+                                                    <svg class="mins" xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="15px"
+                                                        height="2px">
+                                                        <path fill-rule="evenodd" fill="rgb(22, 22, 25)"
+                                                            d="M0.000,-0.000 L15.000,-0.000 L15.000,2.000 L0.000,2.000 L0.000,-0.000 Z" />
+                                                    </svg>
+
+                                                    <svg class="plus" xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="15px"
+                                                        height="15px">
+                                                        <path fill-rule="evenodd" fill="rgb(22, 22, 25)"
+                                                            d="M15.000,8.000 L9.000,8.000 L9.000,15.000 L7.000,15.000 L7.000,8.000 L0.000,8.000 L0.000,6.000 L7.000,6.000 L7.000,-0.000 L9.000,-0.000 L9.000,6.000 L15.000,6.000 L15.000,8.000 Z" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+
+                                            <div id="checkoutCollapseOnee" class="mt-4 checkout-content collapse show"
+                                                aria-labelledby="checkoutHeadingOnee" data-parent="#checkoutAccordion">
+                                                <p class="col-lg-12 mb-4d75 form-row form-row-first validate-required woocommerce-invalid woocommerce-invalid-required-field"
+                                                    id="billing_first_name_field" data-priority="10">
+                                                    <label for="isSameAddress" class="form-label">Kart Sahibi</label>
+                                                    <input type="text" class="input-text form-control"
+                                                        name="cardHolderName" id="cardHolderName" placeholder=""
+                                                        value="" autocomplete="given-name" autofocus="autofocus">
+                                                </p>
+                                                <div class="col-lg-12 mb-4d75 form-row form-row-first validate-required woocommerce-invalid woocommerce-invalid-required-field "
+                                                    id="billing_first_name_field" data-priority="10">
+                                                    <label for="billing_first_name" class="form-label">Kart
+                                                        Numarası</label>
+                                                    <div class="row">
+                                                        <div class="col-lg-3 "> <input maxlength="4"
+                                                                [(ngModel)]="cardNumber1" type="text"
+                                                                class="input-text form-control" name="cardNumber1"
+                                                                id="cartNumber1" placeholder="" value=""
+                                                                autocomplete="given-name" autofocus="autofocus"
+                                                                (keyup)="gotoNextInputIf4Lenght('1',cardNumber1)"></div>
+                                                        <div class="col-lg-3 "> <input maxlength="4"
+                                                                [(ngModel)]="cardNumber2" type="text"
+                                                                class="input-text form-control" name="cardNumber2"
+                                                                id="cartNumber2" placeholder="" value=""
+                                                                autocomplete="given-name" autofocus="autofocus"
+                                                                (keyup)="gotoNextInputIf4Lenght('2',cardNumber2)"></div>
+                                                        <div class="col-lg-3 "> <input maxlength="4"
+                                                                [(ngModel)]="cardNumber3" type="text"
+                                                                class="input-text form-control" name="cardNumber3"
+                                                                id="cartNumber3" placeholder="" value=""
+                                                                autocomplete="given-name" autofocus="autofocus"
+                                                                (keyup)="gotoNextInputIf4Lenght('3',cardNumber3)"></div>
+                                                        <div class="col-lg-3 "> <input maxlength="4"
+                                                                [(ngModel)]="cardNumber4" type="text"
+                                                                class="input-text form-control" name="cardNumber4"
+                                                                id="cartNumber4" placeholder="" value=""
+                                                                autocomplete="given-name" autofocus="autofocus"
+                                                                (keyup)="gotoNextInputIf4Lenght('4',cardNumber4)"></div>
+                                                    </div>
+
+
+                                                </div>
+                                                <div class="col-lg-12 mb-4d75 form-row form-row-first validate-required woocommerce-invalid woocommerce-invalid-required-field "
+                                                    id="billing_first_name_field" data-priority="10">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 ">
+                                                            <input [(ngModel)]="expireMonthAndYear" type="month"
+                                                                class="input-text form-control"
+                                                                name="expireMonthAndYear" id="expireMonthAndYear"
+                                                                placeholder="" value="" autocomplete="given-name"
+                                                                autofocus="autofocus">
+                                                        </div>
+                                                        
+                                                        <div class="col-lg-6 ">
+                                                            <input [(ngModel)]="cvc" type="text"
+                                                                class="input-text form-control" name="Cvc"
+                                                                placeholder="" value="" placeholder="Cvc" autocomplete="given-name"
+                                                                autofocus="autofocus">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-row place-order">
+                                        <input (click)="addressAdd()" type="button"
+                                            class="button alt btn btn-dark btn-block rounded-0 py-4"
+                                            name="woocommerce_checkout_place_order" id="place_order" value="Adresi Kaydet"
+                                            data-value="Place order">
+                                            <input (click)="payment()" type="button"
+                                            class="button alt btn btn-dark btn-block rounded-0 py-4"
+                                            name="woocommerce_checkout_place_order" value="Sipariş Ver"
+                                            data-value="Place order">
+
+                                        <input type="hidden" id="_wpnonce" name="_wpnonce" value="926470d564"><input
+                                            type="hidden" name="_wp_http_referer"
+                                            value="/storefront/?wc-ajax=update_order_review">
+                                    </div>
+                                </div>
+
+
+
+                            </form>
+                        </div>
+                    </div>
+                    <!-- .entry-content -->
+                </article>
+                <!-- #post-## -->
+            </main>
+            <!-- #main -->
+        </div>
+        <!-- #primary -->
+    </div>
+    <!-- .col-full -->
+</div>

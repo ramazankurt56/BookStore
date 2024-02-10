@@ -1,0 +1,61 @@
+<main id="content">
+    <div class="bg-gray-200 space-bottom-3">
+        <div class="container">
+            <div class="py-5 py-lg-7">
+                <h6 class="font-weight-medium font-size-7 text-center mt-lg-1">Sipariş Alındı</h6>
+            </div>
+            <div  class="max-width-890 mx-auto">
+                <div class="bg-white pt-6 border">
+                    <h6 class="font-size-3 font-weight-medium text-center mb-4 pb-xl-1">Teşekkür ederim. Siparişiniz alındı.</h6>
+                    <div class="border-bottom mb-5 pb-5 overflow-auto overflow-md-visible">
+                        <div class="pl-3">
+                            <table class="table table-borderless mb-0 ml-1">
+                                <thead>
+                                    <tr>
+                                      <th scope="col" class="font-size-2 font-weight-normal py-0 ">Sipariş numarası:</th>
+                                      <th scope="col" class="font-size-2 font-weight-normal py-0 text-md-center">Tarih:</th>
+                                      <th scope="col" class="font-size-2 font-weight-normal py-0 text-md-center">Toplam: </th>
+                                      <th scope="col" class="font-size-2 font-weight-normal py-0 text-md-right pr-md-9">Ödeme yöntemi:</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                      <th scope="row" class="pr-0 py-0 font-weight-medium">{{orders.orderList[0].orderNumber}}</th>
+                                      <td class="pr-0 py-0 font-weight-medium text-md-center">{{orders.orderList[0].paymentDate| date:'dd.MM.yyyy'}}</td>
+                                      <td class="pr-0 py-0 font-weight-medium text-md-center">₺{{orders.totalPrice}}</td>
+                                      <td class="pr-md-4 py-0 font-weight-medium text-md-center ">{{orders.orderList[0].paymentType}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div *ngFor="let item of orders.orderList "  class="border-bottom mb-5 pb-6">
+                        <div class="px-3 px-md-4">
+                            <div class="ml-md-2">
+                                <h6 class="font-size-3 on-weight-medium mb-4 pb-1">sipariş detayları</h6>
+                                <div class="d-flex justify-content-between mb-4">
+                                    <div class="d-flex align-items-baseline">
+                                        <div>
+                                            <h6 class="font-size-2 font-weight-normal mb-1">{{item.book.title}}</h6>
+                                        </div>
+                                        <span class="font-size-2 ml-4 ml-md-8"> x {{item.quantity}}</span>
+                                    </div>
+                                    <span class="font-weight-medium font-size-2">₺{{item.book.price}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-bottom mb-5 pb-4">
+                        <div class="px-3 pl-md-5 pr-md-4">
+                            <div class="d-flex justify-content-between">
+                                <span class="font-size-2 font-weight-medium">Toplam</span>
+                                <span class="font-weight-medium fon-size-2">₺{{orders.totalPrice}}</span>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,334 @@
+[
+  {
+    "ContainingType": "BookStoreServer.WebApi.Controllers.AuthController",
+    "Method": "CreateAccount",
+    "RelativePath": "api/Auth/CreateAccount",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BookStoreServer.WebApi.DTOs.CreateAccountDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStoreServer.WebApi.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStoreServer.WebApi.Controllers.BooksController",
+    "Method": "GetAll",
+    "RelativePath": "api/Books/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStoreServer.WebApi.Controllers.BooksController",
+    "Method": "GetById",
+    "RelativePath": "api/Books/GetById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStoreServer.WebApi.Controllers.CheckoutController",
+    "Method": "AddressAdd",
+    "RelativePath": "api/Checkout/AddressAdd",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BookStoreServer.WebApi.DTOs.AddressDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStoreServer.WebApi.Controllers.CheckoutController",
+    "Method": "AddressGetById",
+    "RelativePath": "api/Checkout/AddressGetById/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStoreServer.WebApi.Controllers.HomeController",
+    "Method": "Featured",
+    "RelativePath": "api/Home/Featured",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStoreServer.WebApi.Controllers.HomeController",
+    "Method": "Selected",
+    "RelativePath": "api/Home/Selected",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStoreServer.WebApi.Controllers.HomeController",
+    "Method": "Trending",
+    "RelativePath": "api/Home/Trending",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStoreServer.WebApi.Controllers.OrdersController",
+    "Method": "GetAll",
+    "RelativePath": "api/Orders/GetAll/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStoreServer.WebApi.Controllers.OrdersController",
+    "Method": "GetById",
+    "RelativePath": "api/Orders/GetById/{orderNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStoreServer.WebApi.Controllers.ReviewsController",
+    "Method": "Add",
+    "RelativePath": "api/Reviews/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BookStoreServer.WebApi.DTOs.ReviewDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStoreServer.WebApi.Controllers.ReviewsController",
+    "Method": "GetById",
+    "RelativePath": "api/Reviews/GetById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStoreServer.WebApi.Controllers.ShopListController",
+    "Method": "GetAllAuthor",
+    "RelativePath": "api/ShopList/GetAllAuthor",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStoreServer.WebApi.Controllers.ShopListController",
+    "Method": "GetAllCategory",
+    "RelativePath": "api/ShopList/GetAllCategory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStoreServer.WebApi.Controllers.ShopListController",
+    "Method": "GetAllShop",
+    "RelativePath": "api/ShopList/GetAllShop",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BookStoreServer.WebApi.DTOs.RequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStoreServer.WebApi.Controllers.ShoppingCartsController",
+    "Method": "Add",
+    "RelativePath": "api/ShoppingCarts/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BookStoreServer.WebApi.DTOs.AddShoppingCartsDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStoreServer.WebApi.Controllers.ShoppingCartsController",
+    "Method": "GetAll",
+    "RelativePath": "api/ShoppingCarts/GetAll/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStoreServer.WebApi.Controllers.ShoppingCartsController",
+    "Method": "Payment",
+    "RelativePath": "api/ShoppingCarts/Payment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestDto",
+        "Type": "BookStoreServer.WebApi.DTOs.PaymentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStoreServer.WebApi.Controllers.ShoppingCartsController",
+    "Method": "QuantityAdd",
+    "RelativePath": "api/ShoppingCarts/QuantityAdd",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BookStoreServer.WebApi.DTOs.SetShoppingCartsDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStoreServer.WebApi.Controllers.ShoppingCartsController",
+    "Method": "QuantitySubtract",
+    "RelativePath": "api/ShoppingCarts/QuantitySubtract",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BookStoreServer.WebApi.DTOs.SetShoppingCartsDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStoreServer.WebApi.Controllers.ShoppingCartsController",
+    "Method": "RemoveById",
+    "RelativePath": "api/ShoppingCarts/RemoveById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookStoreServer.WebApi.Controllers.ShoppingCartsController",
+    "Method": "TotalAmount",
+    "RelativePath": "api/ShoppingCarts/TotalAmount/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

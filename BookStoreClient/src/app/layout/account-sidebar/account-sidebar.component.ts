@@ -20,6 +20,7 @@ export class AccountSidebarComponent {
       localStorage.setItem("response", JSON.stringify(res))
       this.auth.checkAuthentication() 
       this.shoppinCart.getAllShoppingCarts();
+      console.log(res)
       this.triggerButton2()
     });
   }

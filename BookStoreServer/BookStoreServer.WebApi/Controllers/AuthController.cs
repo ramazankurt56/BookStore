@@ -40,7 +40,7 @@ namespace BookStoreServer.WebApi.Controllers
             }
 
             string token = jwtService.CreateToken(appUser, request.RememberMe);
-            return Ok(new { AccessToken = token });
+            return Ok(new { AccessToken = token,Message="Giriş başarılı" });
         }
         [HttpPost]
         public IActionResult CreateAccount(CreateAccountDto request)

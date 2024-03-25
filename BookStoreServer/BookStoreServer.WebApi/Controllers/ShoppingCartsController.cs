@@ -77,7 +77,7 @@ namespace BookStoreServer.WebApi.Controllers
             }
 
             _context.SaveChanges();
-            return NoContent();
+            return Ok( new { Message="Ürün başarıyla eklendi" });
         }
 
 
@@ -342,7 +342,7 @@ namespace BookStoreServer.WebApi.Controllers
 
                     return BadRequest(new { Message = "İşlem sırasında bir hata aldık ve paranızı geri iade ettik. Lütfen daha sonra tekrar deneyin ya da müşteri temsilcisi ile iletişime geçin!" });
                 }
-               // return NoContent();
+             
 
             }
             else

@@ -128,7 +128,6 @@ C:\Users\ramaz\Desktop\BookStore\BookStoreServer\BookStoreServer.WebApi\obj\Debu
 C:\Users\ramaz\Desktop\BookStore\BookStoreServer\BookStoreServer.WebApi\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.BookStoreServer.WebApi.props
 C:\Users\ramaz\Desktop\BookStore\BookStoreServer\BookStoreServer.WebApi\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\ramaz\Desktop\BookStore\BookStoreServer\BookStoreServer.WebApi\obj\Debug\net8.0\scopedcss\bundle\BookStoreServer.WebApi.styles.css
-C:\Users\ramaz\Desktop\BookStore\BookStoreServer\BookStoreServer.WebApi\obj\Debug\net8.0\BookStoreServer.WebApi.csproj.CopyComplete
 C:\Users\ramaz\Desktop\BookStore\BookStoreServer\BookStoreServer.WebApi\obj\Debug\net8.0\BookStoreServer.WebApi.dll
 C:\Users\ramaz\Desktop\BookStore\BookStoreServer\BookStoreServer.WebApi\obj\Debug\net8.0\refint\BookStoreServer.WebApi.dll
 C:\Users\ramaz\Desktop\BookStore\BookStoreServer\BookStoreServer.WebApi\obj\Debug\net8.0\BookStoreServer.WebApi.pdb
@@ -142,3 +141,5 @@ C:\Users\ramaz\Desktop\BookStore\BookStoreServer\BookStoreServer.WebApi\bin\Debu
 C:\Users\ramaz\Desktop\BookStore\BookStoreServer\BookStoreServer.WebApi\bin\Debug\net8.0\GenericEmailService.dll
 C:\Users\ramaz\Desktop\BookStore\BookStoreServer\BookStoreServer.WebApi\bin\Debug\net8.0\MailKit.dll
 C:\Users\ramaz\Desktop\BookStore\BookStoreServer\BookStoreServer.WebApi\bin\Debug\net8.0\MimeKit.dll
+C:\Users\ramaz\Desktop\BookStore\BookStoreServer\BookStoreServer.WebApi\obj\Debug\net8.0\BookStoreServer.WebApi.sourcelink.json
+C:\Users\ramaz\Desktop\BookStore\BookStoreServer\BookStoreServer.WebApi\obj\Debug\net8.0\BookStor.A0CB399F.Up2Date

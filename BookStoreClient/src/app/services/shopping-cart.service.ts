@@ -28,7 +28,9 @@ export class ShoppingCartService {
       data.bookId=product.id;
       data.quantity=1;
       console.log(this.auth.token.userId)
-      this.http.post("ShoppingCarts/Add/",data,(res)=>{ this.getAllShoppingCarts();})
+      this.http.post("ShoppingCarts/Add/",data,(res)=>{ this.getAllShoppingCarts();
+        console.log(res)
+      })
      }
     }
   getAllShoppingCarts(){

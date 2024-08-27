@@ -12,12 +12,16 @@ namespace BookStoreServer.WebApi.Controllers
     [ApiController]
     public class HomeController : ControllerBase
     {
-        AppDbContext context = new AppDbContext();
+        private readonly AppDbContext _context;
+        public HomeController(AppDbContext context)
+        {
+            _context = context;
+        }
 
         [HttpGet]
         public IActionResult Featured()
         {
-            List<Book> books = context.Books
+            List<Book> books = _context.Books
         .Include(b => b.Reviews)
         .OrderByDescending(b => b.Reviews.Select(r => r.Rating).Average())
         .Take(12)
@@ -43,7 +47,7 @@ namespace BookStoreServer.WebApi.Controllers
         [HttpGet]
         public IActionResult Trending()
         {
-            List<Book> books = context.Books
+            List<Book> books = _context.Books
         .OrderByDescending(b => b.CreatedDate).Take(10) // En son ekleme tarihine göre sıralama
         .ToList();
             List<HomeFeaturedDto> requestDto = new();
@@ -67,7 +71,7 @@ namespace BookStoreServer.WebApi.Controllers
         [HttpGet]
         public IActionResult Selected()
         {
-            List<Book> randomBooks = context.Books.OrderBy(x => Guid.NewGuid()).Take(4).ToList();
+            List<Book> randomBooks = _context.Books.OrderBy(x => Guid.NewGuid()).Take(4).ToList();
             List<HomeFeaturedDto> requestDto = new();
             foreach (Book book in randomBooks)
             {

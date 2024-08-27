@@ -12,7 +12,7 @@
             public bool IsActive { get; set; } = true;
             public bool IsDeleted { get; set; } = false;
             public string ISBN { get; set; } = string.Empty;
-            public DateTime CreateAt { get; set; } = DateTime.Now;
+            public DateTime CreateAt { get; set; } = DateTime.UtcNow;
             public int ShoppingCartId { get; set; }
     }
 }

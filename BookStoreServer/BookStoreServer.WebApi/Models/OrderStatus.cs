@@ -7,6 +7,6 @@ namespace BookStoreServer.WebApi.Models
         public int Id { get; set; }
         public string OrderNumber { get; set; }
         public OrderStatusEnum Status { get; set; }
-        public DateTime StatusDate { get; set; }
+        public DateTime StatusDate { get; set; } 
     }
 }

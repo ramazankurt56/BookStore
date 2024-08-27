@@ -5,10 +5,10 @@ namespace BookStoreServer.WebApi.Context
 {
     public class AppDbContext:DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public AppDbContext(DbContextOptions options) : base(options)
         {
-            optionsBuilder.UseSqlServer("Data Source=KURT\\SQLEXPRESS;Initial Catalog=BookStoreTestDb;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
         }
+
         public DbSet<Book> Books { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<BookCategory> BookCategories { get; set; }

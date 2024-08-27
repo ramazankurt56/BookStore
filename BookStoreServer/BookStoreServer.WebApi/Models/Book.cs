@@ -19,7 +19,7 @@ namespace BookStoreServer.WebApi.Models
         public string CoverImageUrl { get; set; } = string.Empty;
         public bool IsDeleted { get; set; } = false;
         public bool IsActive { get; set; } = true;
-        public DateTime CreatedDate { get; set; } = DateTime.Now;
+        public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
         public List<Review> Reviews { get; set; }
 
     }

@@ -11,25 +11,29 @@ namespace BookStoreServer.WebApi.Controllers
     [ApiController]
     public class BooksController : ControllerBase
     {
-        AppDbContext context = new AppDbContext();
+        private readonly AppDbContext _context;
+        public BooksController(AppDbContext context)
+        {
+            _context = context;
+        }
         [HttpGet]
         public IActionResult GetById(int Id)
         {
             if (Id!=null)
             {
-                Book? books = context.Books.Where(p => p.Id == Id).FirstOrDefault();
+                Book? books = _context.Books.Where(p => p.Id == Id).FirstOrDefault();
                 if (books!=null)
                 {
                     return Ok(books);
                 }
                 else { 
-                    var bookIndex = context.Books.Where(p => p.Id == 2).FirstOrDefault();
+                    var bookIndex = _context.Books.Where(p => p.Id == 2).FirstOrDefault();
                     return Ok(bookIndex);
                 }
             }
             else
             {
-                Book? books = context.Books.Where(p => p.Id == 2).FirstOrDefault();           
+                Book? books = _context.Books.Where(p => p.Id == 2).FirstOrDefault();           
                     return Ok(books);
             }
           
@@ -38,7 +42,7 @@ namespace BookStoreServer.WebApi.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            List<Book> books = context.Books.ToList();
+            List<Book> books = _context.Books.ToList();
             List<BookDto> requestDto = new();
             foreach (Book book in books)
             {

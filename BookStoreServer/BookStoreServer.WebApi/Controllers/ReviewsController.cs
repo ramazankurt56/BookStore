@@ -11,11 +11,15 @@ namespace BookStoreServer.WebApi.Controllers
     public class ReviewsController : ControllerBase
     {
 
-        AppDbContext context = new AppDbContext();
+        private readonly AppDbContext _context;
+        public ReviewsController(AppDbContext context)
+        {
+            _context = context;
+        }
         [HttpGet]
         public IActionResult GetById(int Id)
         {
-            List<Review> books = context.Reviews.Where(p => p.BookId == Id).ToList();
+            List<Review> books = _context.Reviews.Where(p => p.BookId == Id).ToList();
             return Ok(books);
         }
 
@@ -28,11 +32,11 @@ namespace BookStoreServer.WebApi.Controllers
                 Details = request.Details,
                 Title = request.Title,
                 Rating = request.Rating,
-                CreatedDate=DateTime.Now
+                CreatedDate=DateTime.UtcNow
                
             };
-            context.Reviews.Add(review);
-            context.SaveChanges();
+            _context.Reviews.Add(review);
+            _context.SaveChanges();
             return NoContent();
         }
 

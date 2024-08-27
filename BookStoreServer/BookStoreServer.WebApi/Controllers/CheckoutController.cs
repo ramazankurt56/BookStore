@@ -11,12 +11,16 @@ namespace BookStoreServer.WebApi.Controllers
     [ApiController]
     public class CheckoutController : ControllerBase
     {
-        AppDbContext context=new AppDbContext();
+        private readonly AppDbContext _context;
+        public CheckoutController(AppDbContext context)
+        {
+            _context = context;
+        }
         [HttpPost]
         public IActionResult AddressAdd(AddressDto request)
         {
-            User? user = context.Users.FirstOrDefault(p=>p.Id==request.UserId);
-            Address? addresName = context.Address.FirstOrDefault(p => p.UserId == request.UserId &&  p.AddressName == request.AddressName );
+            User? user = _context.Users.FirstOrDefault(p=>p.Id==request.UserId);
+            Address? addresName = _context.Address.FirstOrDefault(p => p.UserId == request.UserId &&  p.AddressName == request.AddressName );
             if(addresName is not null)
             {
                 return NoContent();
@@ -37,8 +41,8 @@ namespace BookStoreServer.WebApi.Controllers
                     Telephone = request.Telephone,
                     AddressName = request.AddressName
                 };
-                context.Address.Add(address);
-                context.SaveChanges();
+                _context.Address.Add(address);
+                _context.SaveChanges();
                 return Ok(address);
             }
             return NoContent();
@@ -47,7 +51,7 @@ namespace BookStoreServer.WebApi.Controllers
         [HttpGet("{userId}")]
         public IActionResult AddressGetById(int userId)
         {
-            List<Address> address=context.Address.Where(p=>p.UserId==userId).ToList();
+            List<Address> address= _context.Address.Where(p=>p.UserId==userId).ToList();
             return Ok(address); 
         }
 

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { AuthService } from './auth.service';
 import { ErrorService } from './error.service';
 import { SwalService } from './swal.service';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class HttpService {
     private swal:SwalService
   ) { }
   get(api: string, callBack: (res: any) => void) {
-    this.http.get(`https://localhost:7250/api/${api}`, {
+    this.http.get(`${environment.api_url}${api}`, {
       headers: {
         "Authorization": "Bearer " + this.auth.tokenString
       }
@@ -30,7 +31,7 @@ export class HttpService {
       })
   }
   post(api: string, data: any, callBack: (res: any) => void) {
-    this.http.post(`https://localhost:7250/api/${api}`, data, {
+    this.http.post(`${environment.api_url}${api}`, data, {
       headers: {
         "Authorization": "Bearer " + this.auth.tokenString
       }

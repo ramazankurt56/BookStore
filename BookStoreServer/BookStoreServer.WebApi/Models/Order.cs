@@ -23,13 +23,12 @@ namespace BookStoreServer.WebApi.Models
 
   
 
-        public static string GetNewOrderNumber()
+        public static string GetNewOrderNumber(AppDbContext context)
         {
             string initialLetter = "TNR";
-            string year = DateTime.Now.Year.ToString();
+            string year = DateTime.UtcNow.Year.ToString();
             string newOrderNumber = initialLetter + year;
 
-            AppDbContext context = new();
             Order? lastOrder = context.Orders.OrderByDescending(o => o.Id).FirstOrDefault();
 
                 string currentOrderNumber = lastOrder?.OrderNumber;

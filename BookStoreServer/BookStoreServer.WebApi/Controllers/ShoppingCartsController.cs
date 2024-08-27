@@ -231,7 +231,7 @@ namespace BookStoreServer.WebApi.Controllers
             request.PaidPrice = commission.ToString();//komisyon + ödeme tutarı
             request.Currency = currency.ToString();//Para tipi
             request.Installment = 1;//Taksit seçeneği
-            request.BasketId = Order.GetNewOrderNumber();//Sepet Id TNR2023000000001
+            request.BasketId = Order.GetNewOrderNumber(_context);//Sepet Id TNR2023000000001
             request.PaymentChannel = PaymentChannel.WEB.ToString();
             request.PaymentGroup = PaymentGroup.PRODUCT.ToString();
 
@@ -270,7 +270,7 @@ namespace BookStoreServer.WebApi.Controllers
             {
                 try
                 {
-                    string orderNumber = Order.GetNewOrderNumber();
+                    string orderNumber = Order.GetNewOrderNumber(_context);
 
                     List<Order> orders = new();
                     foreach (var book in requestDto.Books)

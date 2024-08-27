@@ -3,8 +3,6 @@ using BookStoreServer.WebApi.DTOs;
 using BookStoreServer.WebApi.Models;
 using BookStoreServer.WebApi.Services;
 using BookStoreServer.WebApi.Validators;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookStoreServer.WebApi.Controllers
@@ -12,9 +10,16 @@ namespace BookStoreServer.WebApi.Controllers
     [Route("api/[controller]/[action]")]
     [ApiController]
    // [Authorize(AuthenticationSchemes = "Bearer")] //attribute
-    public class AuthController(JwtService jwtService) : ControllerBase
+    public class AuthController : ControllerBase
     {
-        AppDbContext context = new AppDbContext();
+        private readonly AppDbContext _context;
+        private readonly JwtService _jwtService;
+        public AuthController(AppDbContext context, JwtService jwtService)
+        {
+            _context = context;
+            _jwtService = jwtService;
+        }
+
         [HttpPost]
         public IActionResult Login(LoginDto request)
         {
@@ -26,26 +31,26 @@ namespace BookStoreServer.WebApi.Controllers
                 return StatusCode(422, validationResult.Errors.Select(s => s.ErrorMessage));
             }
 
-            User? appUser = context.Users.FirstOrDefault(p => p.Email == request.Email);
+            User? appUser = _context.Users.FirstOrDefault(p => p.Email == request.Email);
             if (appUser is null)
             {
                 return BadRequest(new { Message = "Kullanıcı bulunamadı!" });
             }
 
-            User? result = context.Users.FirstOrDefault(p => p.Password == request.Password);
+            User? result = _context.Users.FirstOrDefault(p => p.Password == request.Password);
 
             if (result is null)
             {
                 return BadRequest(new { Message = "Şifreniz yanlış" });
             }
 
-            string token = jwtService.CreateToken(appUser, request.RememberMe);
+            string token = _jwtService.CreateToken(appUser, request.RememberMe);
             return Ok(new { AccessToken = token,Message="Giriş başarılı" });
         }
         [HttpPost]
         public IActionResult CreateAccount(CreateAccountDto request)
         {
-            User? appUser = context.Users.FirstOrDefault(p=>p.Email == request.Email);
+            User? appUser = _context.Users.FirstOrDefault(p=>p.Email == request.Email);
             
             if(appUser is null)
             {
@@ -56,8 +61,8 @@ namespace BookStoreServer.WebApi.Controllers
                     Lastname = request.LastName,
                     Name = request.Name,
                 };
-                context.Users.Add(user);
-                context.SaveChanges();  
+                _context.Users.Add(user);
+                _context.SaveChanges();  
                 return NoContent();
             }
             else

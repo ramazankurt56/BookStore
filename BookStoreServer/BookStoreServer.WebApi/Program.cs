@@ -2,6 +2,8 @@ using BookStoreServer.WebApi.Context;
 using BookStoreServer.WebApi.Options;
 using BookStoreServer.WebApi.Services;
 using BookStoreServer.WebApi.Utulities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -14,8 +16,12 @@ builder.Services.AddCors(c =>
 {
     c.AddDefaultPolicy(p => p.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
 });
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+builder.Services.AddHostedService<DatabaseMigratorJob>();
 builder.Services.TryAddScoped<JwtService>();
-builder.Services.AddDbContext<AppDbContext>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));

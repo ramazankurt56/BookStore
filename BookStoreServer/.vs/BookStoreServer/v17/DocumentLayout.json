@@ -1,38 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ramaz\\Desktop\\BookStore\\BookStoreServer\\",
+  "WorkspaceRootPath": "C:\\Users\\ramaz\\source\\repos\\BookStore\\BookStoreServer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|c:\\users\\ramaz\\desktop\\bookstore\\bookstoreserver\\bookstoreserver.webapi\\controllers\\shoppingcartscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|solutionrelative:bookstoreserver.webapi\\controllers\\shoppingcartscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|c:\\users\\ramaz\\source\\repos\\bookstore\\bookstoreserver\\bookstoreserver.webapi\\backgroundjobs\\seedjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|solutionrelative:bookstoreserver.webapi\\backgroundjobs\\seedjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|c:\\users\\ramaz\\desktop\\bookstore\\bookstoreserver\\bookstoreserver.webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|solutionrelative:bookstoreserver.webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|c:\\users\\ramaz\\source\\repos\\bookstore\\bookstoreserver\\bookstoreserver.webapi\\backgroundjobs\\databasemigratorjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|solutionrelative:bookstoreserver.webapi\\backgroundjobs\\databasemigratorjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|c:\\users\\ramaz\\desktop\\bookstore\\bookstoreserver\\bookstoreserver.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|c:\\users\\ramaz\\source\\repos\\bookstore\\bookstoreserver\\bookstoreserver.webapi\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|solutionrelative:bookstoreserver.webapi\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|c:\\users\\ramaz\\source\\repos\\bookstore\\bookstoreserver\\bookstoreserver.webapi\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|solutionrelative:bookstoreserver.webapi\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|c:\\users\\ramaz\\source\\repos\\bookstore\\bookstoreserver\\bookstoreserver.webapi\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|solutionrelative:bookstoreserver.webapi\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|c:\\users\\ramaz\\source\\repos\\bookstore\\bookstoreserver\\bookstoreserver.webapi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|solutionrelative:bookstoreserver.webapi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|c:\\users\\ramaz\\source\\repos\\bookstore\\bookstoreserver\\bookstoreserver.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|solutionrelative:bookstoreserver.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|c:\\users\\ramaz\\desktop\\bookstore\\bookstoreserver\\bookstoreserver.webapi\\models\\bookcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|solutionrelative:bookstoreserver.webapi\\models\\bookcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|c:\\users\\ramaz\\source\\repos\\bookstore\\bookstoreserver\\bookstoreserver.webapi\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|solutionrelative:bookstoreserver.webapi\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|c:\\users\\ramaz\\desktop\\bookstore\\bookstoreserver\\bookstoreserver.webapi\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|solutionrelative:bookstoreserver.webapi\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|c:\\users\\ramaz\\source\\repos\\bookstore\\bookstoreserver\\bookstoreserver.webapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|solutionrelative:bookstoreserver.webapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|c:\\users\\ramaz\\desktop\\bookstore\\bookstoreserver\\bookstoreserver.webapi\\utulities\\servicetool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|solutionrelative:bookstoreserver.webapi\\utulities\\servicetool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|c:\\users\\ramaz\\source\\repos\\bookstore\\bookstoreserver\\bookstoreserver.webapi\\models\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|solutionrelative:bookstoreserver.webapi\\models\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|c:\\users\\ramaz\\desktop\\bookstore\\bookstoreserver\\bookstoreserver.webapi\\options\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|solutionrelative:bookstoreserver.webapi\\options\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|c:\\users\\ramaz\\desktop\\bookstore\\bookstoreserver\\bookstoreserver.webapi\\services\\mailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|solutionrelative:bookstoreserver.webapi\\services\\mailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|c:\\users\\ramaz\\source\\repos\\bookstore\\bookstoreserver\\bookstoreserver.webapi\\dtos\\shoppingcartresponedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED17AA0A-5A65-4973-BF49-62141FD7C90E}|BookStoreServer.WebApi\\BookStoreServer.WebApi.csproj|solutionrelative:bookstoreserver.webapi\\dtos\\shoppingcartresponedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,114 +54,169 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "BookStoreServer.WebApi\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\ramaz\\Desktop\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "BookStoreServer.WebApi\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwCoAAABHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-24T12:27:46.194Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ShoppingCartsController.cs",
-              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Controllers\\ShoppingCartsController.cs",
-              "RelativeDocumentMoniker": "BookStoreServer.WebApi\\Controllers\\ShoppingCartsController.cs",
-              "ToolTip": "C:\\Users\\ramaz\\Desktop\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Controllers\\ShoppingCartsController.cs",
-              "RelativeToolTip": "BookStoreServer.WebApi\\Controllers\\ShoppingCartsController.cs",
-              "ViewState": "AQIAAIAAAAAAAAAAAAAwwIUAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-24T12:16:19.865Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Program.cs",
-              "RelativeDocumentMoniker": "BookStoreServer.WebApi\\Program.cs",
-              "ToolTip": "C:\\Users\\ramaz\\Desktop\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Program.cs",
-              "RelativeToolTip": "BookStoreServer.WebApi\\Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T13:48:27.979Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Context\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "BookStoreServer.WebApi\\Context\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\ramaz\\Desktop\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Context\\AppDbContext.cs",
-              "RelativeToolTip": "BookStoreServer.WebApi\\Context\\AppDbContext.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAA5wBYAAABYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T11:35:44.491Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "BookCategory.cs",
-              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Models\\BookCategory.cs",
-              "RelativeDocumentMoniker": "BookStoreServer.WebApi\\Models\\BookCategory.cs",
-              "ToolTip": "C:\\Users\\ramaz\\Desktop\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Models\\BookCategory.cs",
-              "RelativeToolTip": "BookStoreServer.WebApi\\Models\\BookCategory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "BooksController.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\source\\repos\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Controllers\\BooksController.cs",
+              "RelativeDocumentMoniker": "BookStoreServer.WebApi\\Controllers\\BooksController.cs",
+              "ToolTip": "C:\\Users\\ramaz\\source\\repos\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Controllers\\BooksController.cs",
+              "RelativeToolTip": "BookStoreServer.WebApi\\Controllers\\BooksController.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAYwBQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T11:35:38.497Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ServiceTool.cs",
-              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Utulities\\ServiceTool.cs",
-              "RelativeDocumentMoniker": "BookStoreServer.WebApi\\Utulities\\ServiceTool.cs",
-              "ToolTip": "C:\\Users\\ramaz\\Desktop\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Utulities\\ServiceTool.cs",
-              "RelativeToolTip": "BookStoreServer.WebApi\\Utulities\\ServiceTool.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T12:36:24.733Z",
+              "WhenOpened": "2024-08-27T14:42:54.676Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "EmailSettings.cs",
-              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Options\\EmailSettings.cs",
-              "RelativeDocumentMoniker": "BookStoreServer.WebApi\\Options\\EmailSettings.cs",
-              "ToolTip": "C:\\Users\\ramaz\\Desktop\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Options\\EmailSettings.cs",
-              "RelativeToolTip": "BookStoreServer.WebApi\\Options\\EmailSettings.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\source\\repos\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "BookStoreServer.WebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\ramaz\\source\\repos\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Program.cs",
+              "RelativeToolTip": "BookStoreServer.WebApi\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T12:36:22.335Z",
+              "WhenOpened": "2024-08-27T11:38:49.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DatabaseMigratorJob.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\source\\repos\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\BackgroundJobs\\DatabaseMigratorJob.cs",
+              "RelativeDocumentMoniker": "BookStoreServer.WebApi\\BackgroundJobs\\DatabaseMigratorJob.cs",
+              "ToolTip": "C:\\Users\\ramaz\\source\\repos\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\BackgroundJobs\\DatabaseMigratorJob.cs",
+              "RelativeToolTip": "BookStoreServer.WebApi\\BackgroundJobs\\DatabaseMigratorJob.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwB0AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T11:38:34.725Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "MailService.cs",
-              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Services\\MailService.cs",
-              "RelativeDocumentMoniker": "BookStoreServer.WebApi\\Services\\MailService.cs",
-              "ToolTip": "C:\\Users\\ramaz\\Desktop\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Services\\MailService.cs",
-              "RelativeToolTip": "BookStoreServer.WebApi\\Services\\MailService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Review.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\source\\repos\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Models\\Review.cs",
+              "RelativeDocumentMoniker": "BookStoreServer.WebApi\\Models\\Review.cs",
+              "ToolTip": "C:\\Users\\ramaz\\source\\repos\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Models\\Review.cs",
+              "RelativeToolTip": "BookStoreServer.WebApi\\Models\\Review.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T12:36:20.792Z",
+              "WhenOpened": "2024-08-27T11:30:14.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\source\\repos\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "BookStoreServer.WebApi\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\ramaz\\source\\repos\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Models\\Order.cs",
+              "RelativeToolTip": "BookStoreServer.WebApi\\Models\\Order.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAA0wBwAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T11:29:11.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OrderStatus.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\source\\repos\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Models\\OrderStatus.cs",
+              "RelativeDocumentMoniker": "BookStoreServer.WebApi\\Models\\OrderStatus.cs",
+              "ToolTip": "C:\\Users\\ramaz\\source\\repos\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Models\\OrderStatus.cs",
+              "RelativeToolTip": "BookStoreServer.WebApi\\Models\\OrderStatus.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T11:28:57.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SeedJob.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\source\\repos\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\BackgroundJobs\\SeedJob.cs",
+              "RelativeDocumentMoniker": "BookStoreServer.WebApi\\BackgroundJobs\\SeedJob.cs",
+              "ToolTip": "C:\\Users\\ramaz\\source\\repos\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\BackgroundJobs\\SeedJob.cs*",
+              "RelativeToolTip": "BookStoreServer.WebApi\\BackgroundJobs\\SeedJob.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T14:47:33.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\source\\repos\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Models\\Book.cs",
+              "RelativeDocumentMoniker": "BookStoreServer.WebApi\\Models\\Book.cs",
+              "ToolTip": "C:\\Users\\ramaz\\source\\repos\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Models\\Book.cs",
+              "RelativeToolTip": "BookStoreServer.WebApi\\Models\\Book.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAkAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T11:28:29.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ReviewsController.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\source\\repos\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Controllers\\ReviewsController.cs",
+              "RelativeDocumentMoniker": "BookStoreServer.WebApi\\Controllers\\ReviewsController.cs",
+              "ToolTip": "C:\\Users\\ramaz\\source\\repos\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Controllers\\ReviewsController.cs",
+              "RelativeToolTip": "BookStoreServer.WebApi\\Controllers\\ReviewsController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwCIAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T11:27:29.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\ramaz\\source\\repos\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Dockerfile",
+              "RelativeDocumentMoniker": "BookStoreServer.WebApi\\Dockerfile",
+              "ToolTip": "C:\\Users\\ramaz\\source\\repos\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\Dockerfile",
+              "RelativeToolTip": "BookStoreServer.WebApi\\Dockerfile",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-08-27T11:41:27.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ShoppingCartResponeDto.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\source\\repos\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\DTOs\\ShoppingCartResponeDto.cs",
+              "RelativeDocumentMoniker": "BookStoreServer.WebApi\\DTOs\\ShoppingCartResponeDto.cs",
+              "ToolTip": "C:\\Users\\ramaz\\source\\repos\\BookStore\\BookStoreServer\\BookStoreServer.WebApi\\DTOs\\ShoppingCartResponeDto.cs",
+              "RelativeToolTip": "BookStoreServer.WebApi\\DTOs\\ShoppingCartResponeDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T11:28:10.656Z",
               "EditorCaption": ""
             }
           ]

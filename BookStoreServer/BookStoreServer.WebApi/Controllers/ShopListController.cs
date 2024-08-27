@@ -11,12 +11,16 @@ namespace BookStoreServer.WebApi.Controllers
     [ApiController]
     public class ShopListController : ControllerBase
     {
-        AppDbContext context = new AppDbContext();
+        private readonly AppDbContext _context;
+        public ShopListController(AppDbContext context)
+        {
+            _context = context;
+        }
         [HttpPost]
         public IActionResult GetAllShop(RequestDto request)
         {
             ResponseDto<List<Book>> response = new();
-            List<Book> books = context.Books.ToList();
+            List<Book> books = _context.Books.ToList();
             List<Book> newBooks = new();
 
             
@@ -25,7 +29,7 @@ namespace BookStoreServer.WebApi.Controllers
                 
                 if (request.CategoryId != null)
                 {
-                    newBooks = context.BookCategories
+                    newBooks = _context.BookCategories
                         .Where(p => p.CategoryId == request.CategoryId)
                         .Select(s => s.Book)
                         .ToList();
@@ -37,11 +41,11 @@ namespace BookStoreServer.WebApi.Controllers
 
                 if (request.Author != null)
                 {
-                    newBooks = context.Books.Where(s => s.Author == request.Author).ToList();
+                    newBooks = _context.Books.Where(s => s.Author == request.Author).ToList();
                 }
                 if (!string.IsNullOrEmpty(request.Search) && request.Search.Length >= 3)
                 {
-                    newBooks = context.Books.Where(s => s.Title.Contains(request.Search)).ToList();
+                    newBooks = _context.Books.Where(s => s.Title.Contains(request.Search)).ToList();
                 }
             }
             else if (request.Filter == "price")
@@ -49,7 +53,7 @@ namespace BookStoreServer.WebApi.Controllers
 
                 if (request.CategoryId != null)
                 {
-                    newBooks = context.BookCategories
+                    newBooks = _context.BookCategories
                         .Where(p => p.CategoryId == request.CategoryId)
                         .Select(s => s.Book)
                         .OrderBy(s => s.Price)
@@ -62,11 +66,11 @@ namespace BookStoreServer.WebApi.Controllers
 
                 if (request.Author != null)
                 {
-                    newBooks = context.Books.Where(s => s.Author == request.Author).ToList();
+                    newBooks = _context.Books.Where(s => s.Author == request.Author).ToList();
                 }
                 if (!string.IsNullOrEmpty(request.Search) && request.Search.Length >= 3)
                 {
-                    newBooks = context.Books.Where(s => s.Title.Contains(request.Search)).ToList();
+                    newBooks = _context.Books.Where(s => s.Title.Contains(request.Search)).ToList();
                 }
 
             }
@@ -75,7 +79,7 @@ namespace BookStoreServer.WebApi.Controllers
 
                 if (request.CategoryId != null)
                 {
-                    newBooks = context.BookCategories
+                    newBooks = _context.BookCategories
                         .Where(p => p.CategoryId == request.CategoryId)
                         .Select(s => s.Book)
                         .OrderByDescending(s => s.Price)
@@ -88,11 +92,11 @@ namespace BookStoreServer.WebApi.Controllers
 
                 if (request.Author != null)
                 {
-                    newBooks = context.Books.Where(s => s.Author == request.Author).ToList();
+                    newBooks = _context.Books.Where(s => s.Author == request.Author).ToList();
                 }
                 if (!string.IsNullOrEmpty(request.Search) && request.Search.Length >= 3)
                 {
-                    newBooks = context.Books.Where(s => s.Title.Contains(request.Search)).ToList();
+                    newBooks = _context.Books.Where(s => s.Title.Contains(request.Search)).ToList();
                 }
             }
 
@@ -110,13 +114,13 @@ namespace BookStoreServer.WebApi.Controllers
         [HttpGet]
         public IActionResult GetAllCategory()
         {
-            List<Category> categories = context.Categories.ToList();
+            List<Category> categories = _context.Categories.ToList();
             return Ok(categories);
         }
         [HttpGet]
         public IActionResult GetAllAuthor()
         {
-            var author = context.Books
+            var author = _context.Books
                              .Select(c => new { author = c.Author.Trim() })
                               .Distinct()
                              .ToList();
